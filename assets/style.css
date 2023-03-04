@@ -1,0 +1,66 @@
+
+/*Header*/
+header {
+    display: inline;
+}
+
+#highscores-link {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/*Card*/
+#timer {
+    
+    text-align: right;
+    margin-right: 10px;
+}
+
+.card {
+    background-color: rgb(231, 227, 221);
+    border: 1px;
+    box-shadow: black 0px 2px 8px 0px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 800px;
+    padding: 10px 40px 30px 40px;
+    
+
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.instructions {
+    width: 500px;
+    margin: auto;
+}
+
+/*Start Button*/
+#start-button {
+    display: inline-block;
+    background-color: blueviolet;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: rgb(136, 85, 184);
+}
+
+#start-button:active {
+    background-color: rgb(109, 32, 182);
+}
