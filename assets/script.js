@@ -4,8 +4,9 @@ var time = document.getElementById("timer");
 var instructions = document.getElementById("instructions");
 var multipleChoice = document.getElementById("multiple-choice");
 var timeLeft;
+var firstAnswers = questions[0].answers;
 
-// Questions Object
+// Questions Array and Objects
 var questions = [
   {
     question: "Javascript is an _______ language?",
@@ -84,7 +85,30 @@ function startGame() {
   startTimer();
 }
 
+//Render questions and answers
+const newLi = document.createElement("li");
+
+function renderQuestions() {
+  // for (let i = 0; i < questions[0].answers.length; i++) {
+  // let firstAnswers = questions[0].answers;
+  // newLi.textContent = firstAnswers;
+  // //   multipleChoice.append(newLi);
+  // }
+  firstAnswers.forEach((item) => {
+    newLi.innerText = item;
+    multipleChoice.appendChild(newLi);
+  });
+}
+
 //Initial Function
 
 //Test
-console.log(questions);
+console.log(questions[1].answers);
+console.log(questions[1].answers[0]);
+console.log(questions[1].correctAnswer);
+
+function testText() {
+  const newLi = document.createElement("li");
+  newLi.textContent = questions[1].answers;
+  multipleChoice.append(newLi);
+}

@@ -46,6 +46,10 @@ header {
     margin: auto;
 }
 
+#multiple-choice {
+    text-align: left;
+}
+
 /*Start Button*/
 #start-button {
     display: inline-block;
