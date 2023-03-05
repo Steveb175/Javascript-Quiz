@@ -1,4 +1,8 @@
 
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /*Header*/
 header {
     display: inline;
@@ -59,6 +63,7 @@ header {
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 #start-button:hover {
@@ -67,4 +72,22 @@ header {
 
 #start-button:active {
     background-color: rgb(109, 32, 182);
+}
+
+/*Answer Buttons*/
+.btn {
+    display: block;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 0 5px 2px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    border: 1px solid black;
+}
+
+.hide {
+    display: none;
 }
