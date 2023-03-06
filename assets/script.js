@@ -8,6 +8,7 @@ var answerButtonsContainer = document.getElementById(
   "answer-buttons-container"
 );
 var timeLeft = "";
+var totalTime = "";
 let score = timeLeft;
 var btn = document.getElementsByClassName("btn");
 let currentQuestionIndex = 0;
@@ -76,6 +77,7 @@ function startTimer() {
     if (timeLeft <= 60) {
       timeLeft--;
       time.textContent = "Time: " + timeLeft;
+      totalTime === timeLeft;
       if (timeLeft === 0) {
         clearInterval(timeCurrent);
         document.getElementById("question").textContent = "Game Over!";
@@ -152,17 +154,16 @@ function resetDefault() {
     answerButtonsContainer.removeChild(answerButtonsContainer.firstChild);
   }
 }
-//Initial Function
 
-console.log(questions[0].answers);
-
+//Highscores
 const highscores1 = document.getElementById("highscores-text");
 const submitBtn = document.getElementById("submit-btn");
 const out = document.getElementById("output");
+var highscoresIndex = 0;
 
 // Render score function
 function renderScore() {
-  out.innerHTML = highscores1.value + " " + score;
+  out.innerHTML = highscores1.value + " " + totalTime;
 }
 submitBtn.addEventListener("click", renderScore);
 
