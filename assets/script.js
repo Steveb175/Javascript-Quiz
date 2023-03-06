@@ -159,10 +159,13 @@ console.log(questions[0].answers);
 const highscores1 = document.getElementById("highscores-text");
 const submitBtn = document.getElementById("submit-btn");
 const out = document.getElementById("output");
-var li = document.createElement("li");
 
 // Render score function
 function renderScore() {
   out.innerHTML = highscores1.value + " " + score;
 }
 submitBtn.addEventListener("click", renderScore);
+
+function playAgain() {
+  window.location.href = "../index.html";
+}
