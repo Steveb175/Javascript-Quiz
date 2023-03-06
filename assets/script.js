@@ -134,7 +134,7 @@ function setSatusClass(element, correct) {
     currentQuestionIndex++;
     renderNextQuestion();
     if (currentQuestionIndex === 4) {
-      window.location.href = "assets/Highscores.Html";
+      window.location.href = "./assets/Highscores.html";
       timeLeft.push();
     }
   } else {
@@ -142,7 +142,7 @@ function setSatusClass(element, correct) {
     currentQuestionIndex++;
     renderNextQuestion();
     if (currentQuestionIndex === 4) {
-      window.location.href = "assets/Highscores.Html";
+      window.location.href = "./assets/Highscores.html";
       timeLeft.push();
     }
   }
