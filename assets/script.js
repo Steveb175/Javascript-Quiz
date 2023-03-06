@@ -7,7 +7,7 @@ var questionsContainer = document.getElementById("questionContainer");
 var answerButtonsContainer = document.getElementById(
   "answer-buttons-container"
 );
-var timeLeft;
+var timeLeft = "";
 let score = timeLeft;
 var btn = document.getElementsByClassName("btn");
 let currentQuestionIndex = 0;
@@ -131,10 +131,18 @@ function setSatusClass(element, correct) {
   if (correct) {
     currentQuestionIndex++;
     renderNextQuestion();
+    if (currentQuestionIndex === 4) {
+      window.location.href = "assets/Highscores.Html";
+      timeLeft.push();
+    }
   } else {
     timeLeft - 5;
     currentQuestionIndex++;
     renderNextQuestion();
+    if (currentQuestionIndex === 4) {
+      window.location.href = "assets/Highscores.Html";
+      timeLeft.push();
+    }
   }
 }
 
@@ -147,3 +155,14 @@ function resetDefault() {
 //Initial Function
 
 console.log(questions[0].answers);
+
+const highscores1 = document.getElementById("highscores-text");
+const submitBtn = document.getElementById("submit-btn");
+const out = document.getElementById("output");
+var li = document.createElement("li");
+
+// Render score function
+function renderScore() {
+  out.innerHTML = highscores1.value + " " + score;
+}
+submitBtn.addEventListener("click", renderScore);
